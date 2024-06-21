@@ -4,3 +4,8 @@ from whoosh.index import open_dir
 
 app = Flask(__name__)
 ix = open_dir("indexdir")
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
