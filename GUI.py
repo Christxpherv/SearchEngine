@@ -9,3 +9,13 @@ ix = open_dir("indexdir")
 def index():
     return render_template('index.html')
 
+@app.route('/search', methods=['GET'])
+def search():
+    query_str = request.args.get('q')
+    with ix.searcher() as searcher:
+        query = QueryParser("content", ix.schema).parse(query_str)
+        results = searcher.search(query)
+        print(f"Query: {query_str}, Results: {len(results)}")
+        for result in results:
+            print(dict(result))
+        return render_template('results.html', results=results)
