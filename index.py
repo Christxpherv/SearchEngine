@@ -32,3 +32,6 @@ def index_documents(file_path):
             content = doc.get('content', '')
             add_document(title, url, content)
             print(f"Indexed document: title={title}, url={url}, content length={len(content)}")
+
+# Index documents from output.json
+index_documents("output.json")
