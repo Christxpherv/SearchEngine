@@ -11,3 +11,8 @@ index_dir = "indexdir"
 if not os.path.exists(index_dir):
     os.mkdir(index_dir)
 
+# Create or open the index
+if not os.path.exists(os.path.join(index_dir, "MAIN_WRITELOCK")):  # Check if index is empty
+    ix = create_in(index_dir, schema)
+else:
+    ix = open_dir(index_dir)
