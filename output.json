@@ -27,7 +27,7 @@
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aco_bg_1.0.txt"},
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aco_hu_1.0.txt"},
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aetna_pt_3.0.xml"},
-{"title": "Reports", "url": "http://www.iana.org/reports"},
+{"title": "Reports", "url": "http://www.iana.org/reports", "content": "reports"},
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aco_de_1.0.txt"},
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aco_bs_1.0.txt"},
 {"title": null, "url": "http://www.iana.org/domains/idn-tables/tables/aco_is_1.0.txt"},
