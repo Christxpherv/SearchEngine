@@ -22,3 +22,13 @@ def add_document(title, url, content):
     writer.add_document(title=title, url=url, content=content)
     writer.commit()
     print(f"Indexed document: title={title}, url={url}, content length={len(content)}")
+
+def index_documents(file_path):
+    with open(file_path, 'r') as f:
+        documents = json.load(f)
+        for doc in documents:
+            title = doc.get('title', 'No Title')
+            url = doc.get('url', '')
+            content = doc.get('content', '')
+            add_document(title, url, content)
+            print(f"Indexed document: title={title}, url={url}, content length={len(content)}")
